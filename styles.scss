@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -140,8 +145,10 @@
     }
 }
 
+
 .home {
     padding: 55px 10px 0;
+
 
     .outer {
 
@@ -153,6 +160,16 @@
         .inner {
             text-align: center;
             transition: 0.8s ease-in-out;
+
+            opacity: 0;
+            transform: translateY(0px);
+
+
+            &.slow {
+                opacity: 1;
+                transform: translateY(0);
+                transition: 0.8s ease-in-out;
+            }
 
 
 
@@ -166,9 +183,6 @@
                 object-fit: fill;
                 transition: 1.5s ease;
 
-
-
-
                 @include media('md') {
                     width: 100%;
                     height: auto;
@@ -180,6 +194,9 @@
 
         .inner1 {
             text-align: center;
+
+            
+            
 
             @include media('md') {
                 display: flex;
@@ -217,6 +234,18 @@
     .about1 {
         flex-basis: 60%;
 
+        opacity: 0;
+        transform: translateX(40px);
+
+
+        &.slow {
+            opacity: 1;
+            transform: translateX(0);
+            transition: 0.8s ease-in-out;
+        }
+
+     
+
         h1 {
             text-align: center;
             color: aqua;
@@ -250,7 +279,6 @@
             padding: 15px;
             font-family: 'Times New Roman', Times, serif;
 
-
         }
 
         .icon {
@@ -275,6 +303,16 @@
 
     .about2 {
         display: none;
+
+        opacity: 0;
+        transform: translateY(40px);
+
+
+        &.slow {
+            opacity: 1;
+            transform: translateY(0);
+            transition: 0.8s ease-in-out;
+        }
 
         @include media('md') {
             display: block;
@@ -304,12 +342,12 @@
     display: flex;
     justify-content: end;
     align-items: end;
-    transition: all 0.7s ease-in;
+    transition: all 0.5s ease-in;
 
     &.open {
-        backdrop-filter: blur(10px);
-        right:0;
-        opacity:1;
+        backdrop-filter: blur(15px);
+        right: 0;
+        opacity: 1;
     }
 
 
@@ -375,7 +413,7 @@
             button {
                 padding: 7px 15px;
                 font-size: 1rem;
-                cursor:pointer;
+                cursor: pointer;
                 color: aquamarine;
                 text-transform: uppercase;
                 background-color: black;
@@ -386,22 +424,23 @@
 }
 
 .pop-up {
-   
+
 
     .pop-msg {
         position: fixed;
         top: 15%;
-        width:95%;
-        left:-100%;
+        width: 95%;
+        left: -100%;
         opacity: 0;
         padding: 10px 30px;
-        margin:0 15px;
+        margin: 0 15px;
+        text-align: center;
         background-color: lemonchiffon;
         font-size: 1.5rem;
         transition: all 0.4s ease-in;
 
         &.success {
-            left:0;
+            left: 0;
             opacity: 1;
         }
 
@@ -413,6 +452,7 @@
 .skills {
     padding: 60px 0;
     transition: all 1s ease-out;
+
 
     h1 {
         text-align: center;
@@ -450,6 +490,16 @@
             margin: 0 auto;
             padding: 8px;
             transition: all 0.8s ease-in-out;
+
+            opacity: 0;
+            transform: translateY(-40px);
+
+
+            &.slow {
+                opacity: 1;
+                transform: translateY(0);
+                transition: 0.8s ease-in-out;
+            }
 
             @include media('md') {
                 flex-basis: 25%;
@@ -495,7 +545,7 @@
                     opacity: 0;
                     line-height: 1;
                     font-size: 23px;
-                    font-family: fantasy;
+                    font-family: Protest Guerrilla;
                     transition: all 0.4s ease;
 
                 }
@@ -505,8 +555,10 @@
     }
 }
 
+
 .tools {
     padding: 20px 0;
+
 
     h1 {
         text-align: center;
@@ -534,7 +586,7 @@
 
     }
 
-    .div {
+    .equal {
 
         display: flex;
         flex-wrap: wrap;
@@ -547,9 +599,31 @@
             padding: 8px;
             margin: 0 auto;
 
+            opacity: 0;
+            transform: translateY(-40px);
+
+
+            &.slow {
+                opacity: 1;
+                transform: translateY(0);
+                transition: 0.8s ease-in-out;
+            }
+
             @include media('md') {
                 flex-basis: 25%;
                 padding: 20px 20px 40px 20px;
+
+                &:hover {
+
+                    img {
+                        transform: scale(1.05);
+                    }
+
+                    p {
+                        opacity: 1;
+                        margin-top: 2px;
+                    }
+                }
             }
 
             img {
@@ -566,6 +640,22 @@
                     transform: scale(1.05);
                 }
             }
+
+            p {
+                display: none;
+
+                @include media('md') {
+                    display: block;
+                    text-align: center;
+                    margin-top: -40px;
+                    opacity: 0;
+                    line-height: 1;
+                    font-size: 23px;
+                    font-family: Protest Guerrilla;
+                    transition: all 0.4s ease;
+
+                }
+            }
         }
     }
 }
@@ -578,12 +668,13 @@
     padding: 7px;
     border: 1px solid palegreen;
     background-color: green;
-    transition: .8s ease-out;
+    transition: .20s ease-out;
     cursor: pointer;
 
 
     &.hide {
-        opacity:0;
+        opacity: 0;
+
     }
 
     i {
