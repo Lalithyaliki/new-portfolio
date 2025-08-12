@@ -9,6 +9,11 @@ function onhover() {
     document.querySelector('.nav-links').classList.remove('active');
 };
 
+function refresh(){
+    location.reload();
+};
+
+
 // button scrolling function
 
 let but = document.getElementById("button");
@@ -100,10 +105,10 @@ observer.observe(profile1);
 observer.observe(profile2);
 skills.forEach(ele => {
     observer.observe(ele);
-} );
-skills.forEach(ele => {
-    observer.observe(ele);
-} );
+});
+
+
+
 
 
 

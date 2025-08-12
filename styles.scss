@@ -8,12 +8,13 @@
 
 html {
     scroll-behavior: smooth;
-  }
-  
+}
+
 
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
     position: fixed;
     top: 0;
@@ -25,7 +26,12 @@ html {
 
     .logo {
         display: flex;
-        gap: 5px;
+        align-items: center;
+        gap: 7px;
+
+        img {
+            border-radius: 7px;
+        }
 
         h3 {
             text-transform: capitalize;
@@ -38,6 +44,7 @@ html {
         align-items: center;
         width: 70%;
         height: 100vh;
+        text-transform: capitalize;
         position: fixed;
         top: 30px;
         left: -100%;
@@ -78,6 +85,7 @@ html {
                 height: 33px;
                 cursor: pointer;
                 width: 30px;
+                color:white;
             }
         }
 
@@ -102,7 +110,6 @@ html {
             margin-top: 20px;
             font-size: 17px;
             cursor: pointer;
-            background-color: black;
             background-color: $button;
 
             @include media('md') {
@@ -121,7 +128,8 @@ html {
             button {
                 padding: 5px;
                 background-color: black;
-                color: blue;
+                color:coral;
+                text-transform: capitalize;
             }
         }
     }
@@ -160,7 +168,6 @@ html {
         .inner {
             text-align: center;
             transition: 0.8s ease-in-out;
-
             opacity: 0;
             transform: translateY(0px);
 
@@ -195,8 +202,8 @@ html {
         .inner1 {
             text-align: center;
 
-            
-            
+
+
 
             @include media('md') {
                 display: flex;
@@ -244,7 +251,7 @@ html {
             transition: 0.8s ease-in-out;
         }
 
-     
+
 
         h1 {
             text-align: center;
@@ -334,7 +341,7 @@ html {
 
 .chat {
     position: fixed;
-    top: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     right: -100%;
@@ -342,7 +349,8 @@ html {
     display: flex;
     justify-content: end;
     align-items: end;
-    transition: all 0.5s ease-in;
+    z-index: 999;
+    transition: all 0.7s ease-in;
 
     &.open {
         backdrop-filter: blur(15px);
@@ -373,12 +381,12 @@ html {
             }
 
             button {
-
                 padding: 5px;
                 width: 25px;
                 border: 1px solid white;
                 border-radius: 5px;
                 background-color: black;
+                color: white;
                 cursor: pointer;
 
             }
@@ -392,6 +400,8 @@ html {
             padding: 10px;
             background-color: black;
             margin-bottom: 15px;
+            text-transform: capitalize;
+            color: white;
 
         }
 
@@ -403,6 +413,10 @@ html {
             background-color: black;
             margin-bottom: 10px;
             border: none;
+            max-width: 100%;
+            max-height: 150px;
+            color: white;
+            text-transform: capitalize;
 
         }
 
@@ -438,13 +452,13 @@ html {
         background-color: lemonchiffon;
         font-size: 1.5rem;
         transition: all 0.4s ease-in;
+        text-transform: capitalize;
+        z-index: 1000;
 
         &.success {
             left: 0;
             opacity: 1;
         }
-
-
 
     }
 }
@@ -490,7 +504,6 @@ html {
             margin: 0 auto;
             padding: 8px;
             transition: all 0.8s ease-in-out;
-
             opacity: 0;
             transform: translateY(-40px);
 
@@ -598,7 +611,6 @@ html {
             flex-basis: 50%;
             padding: 8px;
             margin: 0 auto;
-
             opacity: 0;
             transform: translateY(-40px);
 
@@ -632,9 +644,9 @@ html {
                 width: 100%;
                 height: 150px;
                 object-fit: fill;
+                cursor: pointer;
                 box-shadow: 0px 0px 5px aqua;
                 transition: all .2s ease-in-out;
-
 
                 &:hover {
                     transform: scale(1.05);
@@ -665,11 +677,13 @@ html {
     position: fixed;
     right: 15px;
     bottom: 15px;
-    padding: 7px;
+    padding: 3px 7px;
     border: 1px solid palegreen;
     background-color: green;
     transition: .20s ease-out;
     cursor: pointer;
+    color: white;
+    border-radius: 50%;
 
 
     &.hide {
@@ -679,6 +693,5 @@ html {
 
     i {
         font-size: 25px;
-
     }
 }
