@@ -1,16 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @mixin media($breakpoint) {
-    @if($breakpoint == 'md') {
+
+    @if($breakpoint=='sm') {
+        @media(min-width: 375px) {
+            @content;
+        }
+    }
+
+    @else if($breakpoint =='md') {
         @media (min-width: 768px) {
             @content;
         }
     }
+
     @else if($breakpoint=='lg') {
         @media (min-width: 1024px) {
             @content;
         }
     }
+
+
 }
 
 $roboto : 'Roboto';

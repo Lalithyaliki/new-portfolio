@@ -38,11 +38,9 @@ let closebox = document.getElementById("close-chat")
 
 icon.addEventListener("click", function () {
     chatbox.classList.add("open");
-    but.classList.add("hide");
 });
 closebox.addEventListener("click", function () {
     chatbox.classList.remove("open");
-    but.classList.remove("hide");
 });
 
 // getting details of person from the chat box
@@ -68,7 +66,7 @@ document.getElementById("pop").addEventListener("click", function () {
         document.getElementById("chat").classList.remove("open");
 
         email.value = '';
-        but.classList.remove('hide');
+        
 
     }
     else {
