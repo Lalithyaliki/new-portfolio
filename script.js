@@ -9,7 +9,7 @@ function onhover() {
     document.querySelector('.nav-links').classList.remove('active');
 };
 
-function refresh(){
+function refresh() {
     location.reload();
 };
 
@@ -38,11 +38,12 @@ let closebox = document.getElementById("close-chat")
 
 icon.addEventListener("click", function () {
     chatbox.classList.add("open");
-    document.body.style.overflow="hidden";
+    document.body.style.overflow = " hidden";
+
 });
 closebox.addEventListener("click", function () {
     chatbox.classList.remove("open");
-    document.body.style.overflow="auto";
+    document.body.style.overflow = "auto";
 });
 
 // getting details of person from the chat box
@@ -86,18 +87,18 @@ document.getElementById("pop").addEventListener("click", function () {
 });
 
 var home = document.querySelector(".home .outer .inner");
-var profile1 =document.querySelector(".about .about1");
-var profile2 =document.querySelector(".about .about2");
-var skills=document.querySelectorAll(".equal .inner");
+var profile1 = document.querySelector(".about .about1");
+var profile2 = document.querySelector(".about .about2");
+var skills = document.querySelectorAll(".equal .inner");
 
 var observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
             entry.target.classList.add("slow");
         }
     });
-} , {
-    threshold : .9
+}, {
+    threshold: .9
 });
 
 observer.observe(home);
@@ -113,8 +114,8 @@ skills.forEach(ele => {
 
 
 
-  
-  
+
+
 
 
 
