@@ -366,18 +366,16 @@ html {
         background-color: chocolate;
         margin-right: 20px;
         margin-bottom: 20px;
+        position: relative;
 
-        
         @include media('sm') {
             width: 50%;
             height: 45%;
         }
 
-
         @include media('md') {
             width: 25%;
         }
-
 
         .head {
             display: flex;
@@ -430,8 +428,10 @@ html {
         }
 
         .send {
-            display: flex;
-            justify-content: center;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
 
             button {
                 padding: 7px 15px;
@@ -443,8 +443,12 @@ html {
                 border: none;
             }
         }
+
     }
+
 }
+
+
 
 .pop-up {
 

@@ -329,6 +329,7 @@ html {
   background-color: chocolate;
   margin-right: 20px;
   margin-bottom: 20px;
+  position: relative;
 }
 @media (min-width: 400px) {
   .chat .outside {
@@ -383,8 +384,10 @@ html {
   text-transform: capitalize;
 }
 .chat .outside .send {
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .chat .outside .send button {
   padding: 7px 15px;
