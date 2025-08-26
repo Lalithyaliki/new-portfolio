@@ -2,11 +2,12 @@
 
 @mixin media($breakpoint) {
 
-    @if($breakpoint=='sm') {
-        @media(min-width: 375px) {
+    @if($breakpoint =='sm') {
+        @media (min-width: 400px) {
             @content;
         }
     }
+
 
     @else if($breakpoint =='md') {
         @media (min-width: 768px) {

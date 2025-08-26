@@ -250,18 +250,16 @@ html {
     width: 10%;
   }
 }
-.about .about1 .inner {
+.about .about1 .aboutme {
   transform: all 0.9s ease;
+  line-height: 1.6;
   text-align: justify;
-  line-height: 1.5;
-  font-size: 20px;
+  font-size: 19px;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  overflow-wrap: break-word;
   padding: 15px;
   font-family: "Times New Roman", Times, serif;
-}
-@media (min-width: 375px) {
-  .about .about1 .inner {
-    letter-spacing: 0.5px;
-  }
 }
 .about .about1 .icon {
   padding: 15px;
@@ -326,15 +324,21 @@ html {
 }
 .chat .outside {
   padding: 20px;
-  width: 50%;
-  height: 45%;
+  width: 65%;
+  height: 43%;
   background-color: chocolate;
   margin-right: 20px;
   margin-bottom: 20px;
 }
+@media (min-width: 400px) {
+  .chat .outside {
+    width: 50%;
+    height: 45%;
+  }
+}
 @media (min-width: 768px) {
   .chat .outside {
-    width: 22%;
+    width: 25%;
   }
 }
 .chat .outside .head {
