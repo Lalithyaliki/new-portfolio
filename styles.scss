@@ -41,7 +41,7 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 70%;
+        width: 75%;
         height: 100vh;
         text-transform: capitalize;
         position: fixed;
@@ -74,17 +74,18 @@ html {
             width: 100%;
             text-align: end;
 
-            @include media('lg') {
+            @include media('md') {
                 display: none;
             }
 
             button {
                 background-color: black;
                 border-radius: 5px;
-                height: 33px;
-                cursor: pointer;
-                width: 30px;
                 color: white;
+                padding: 5px 10px;
+                font-size: 15px;
+                border: none;
+                cursor: pointer;
             }
         }
 
@@ -153,7 +154,7 @@ html {
 }
 
 .home {
-    padding: 70px 10px 0;
+    padding: 57px 10px 0;
 
 
     .outer {
@@ -181,15 +182,15 @@ html {
             }
 
             img {
-                width: 80%;
+                width: 60%;
                 height: 300px;
                 object-fit: fill;
-                border-radius: 35px;
+                border-radius: 10%;
                 transition: 1.5s ease;
 
                 @include media('md') {
                     width: 100%;
-                    height: auto;
+                    height: 100%;
                     object-fit: fill;
                 }
             }
@@ -229,12 +230,13 @@ html {
 }
 
 .about {
-    padding: 75px 0 30px;
+    padding: 75px 10px 30px;
     transition: all 1s ease-out;
 
     @include media('md') {
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
     }
 
     .about1 {
@@ -324,12 +326,13 @@ html {
 
         @include media('md') {
             display: block;
-            flex-basis: 35%;
-            margin: auto;
+            flex-basis: 40%;
+            text-align: center;
+
 
             img {
-                width: 100%;
-                height: auto;
+                width: 80%;
+                height: 300px;
                 border-radius: 20px;
                 box-shadow: 0px 0px 5px aqua;
                 transition: all .2s ease-in;
@@ -387,8 +390,8 @@ html {
             }
 
             button {
-                padding: 5px;
-                width: 25px;
+                padding: 0px 10px;
+                font-size: 17px;
                 border: 1px solid white;
                 border-radius: 5px;
                 background-color: black;
@@ -448,31 +451,36 @@ html {
 
 }
 
-
-
 .pop-up {
+    position: fixed;
+    top: 15%;
+    left: -100%;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0;
+    transition: all 0.4s ease-in;
+    z-index: 1000;
+    padding: 10px 30px;
+    text-align: center;
+    letter-spacing: 1px;
+    background-color: lemonchiffon;
+    text-transform: capitalize;
+    font-size: 20px;
+    color: black;
+    box-shadow: 0px 0px 10px grey;
 
-    .pop-msg {
-        position: fixed;
-        top: 15%;
-        width: 95%;
-        left: -100%;
-        opacity: 0;
-        padding: 10px 30px;
-        margin: 0 15px;
-        text-align: center;
-        background-color: lemonchiffon;
-        font-size: 1.5rem;
-        transition: all 0.4s ease-in;
-        text-transform: capitalize;
-        z-index: 1000;
 
-        &.success {
-            left: 0;
-            opacity: 1;
-        }
-
+    @include media('md') {
+        width: 50%;
     }
+
+    &.success {
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+
 }
 
 .skills {

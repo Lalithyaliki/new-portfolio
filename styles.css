@@ -37,7 +37,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70%;
+  width: 75%;
   height: 100vh;
   text-transform: capitalize;
   position: fixed;
@@ -70,7 +70,7 @@ html {
   width: 100%;
   text-align: end;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .navbar .nav-links .link {
     display: none;
   }
@@ -78,10 +78,11 @@ html {
 .navbar .nav-links .link button {
   background-color: black;
   border-radius: 5px;
-  height: 33px;
-  cursor: pointer;
-  width: 30px;
   color: white;
+  padding: 5px 10px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
 }
 .navbar .nav-links a {
   text-decoration: none;
@@ -141,7 +142,7 @@ html {
 }
 
 .home {
-  padding: 70px 10px 0;
+  padding: 57px 10px 0;
 }
 @media (min-width: 768px) {
   .home .outer {
@@ -166,17 +167,17 @@ html {
   }
 }
 .home .outer .inner img {
-  width: 80%;
+  width: 60%;
   height: 300px;
   -o-object-fit: fill;
      object-fit: fill;
-  border-radius: 35px;
+  border-radius: 10%;
   transition: 1.5s ease;
 }
 @media (min-width: 768px) {
   .home .outer .inner img {
     width: 100%;
-    height: auto;
+    height: 100%;
     -o-object-fit: fill;
        object-fit: fill;
   }
@@ -208,13 +209,14 @@ html {
 }
 
 .about {
-  padding: 75px 0 30px;
+  padding: 75px 10px 30px;
   transition: all 1s ease-out;
 }
 @media (min-width: 768px) {
   .about {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
   }
 }
 .about .about1 {
@@ -291,12 +293,12 @@ html {
 @media (min-width: 768px) {
   .about .about2 {
     display: block;
-    flex-basis: 35%;
-    margin: auto;
+    flex-basis: 40%;
+    text-align: center;
   }
   .about .about2 img {
-    width: 100%;
-    height: auto;
+    width: 80%;
+    height: 300px;
     border-radius: 20px;
     box-shadow: 0px 0px 5px aqua;
     transition: all 0.2s ease-in;
@@ -351,8 +353,8 @@ html {
   color: aqua;
 }
 .chat .outside .head button {
-  padding: 5px;
-  width: 25px;
+  padding: 0px 10px;
+  font-size: 17px;
   border: 1px solid white;
   border-radius: 5px;
   background-color: black;
@@ -399,23 +401,33 @@ html {
   border: none;
 }
 
-.pop-up .pop-msg {
+.pop-up {
   position: fixed;
   top: 15%;
-  width: 95%;
   left: -100%;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
   opacity: 0;
-  padding: 10px 30px;
-  margin: 0 15px;
-  text-align: center;
-  background-color: lemonchiffon;
-  font-size: 1.5rem;
   transition: all 0.4s ease-in;
-  text-transform: capitalize;
   z-index: 1000;
+  padding: 10px 30px;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: lemonchiffon;
+  text-transform: capitalize;
+  font-size: 20px;
+  color: black;
+  box-shadow: 0px 0px 10px grey;
 }
-.pop-up .pop-msg.success {
-  left: 0;
+@media (min-width: 768px) {
+  .pop-up {
+    width: 50%;
+  }
+}
+.pop-up.success {
+  left: 50%;
+  transform: translateX(-50%);
   opacity: 1;
 }
 

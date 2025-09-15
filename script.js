@@ -49,35 +49,33 @@ closebox.addEventListener("click", function () {
 // getting details of person from the chat box
 
 let email = document.getElementById("email");
-let popupmessage = document.getElementById("pop-msg")
+let popupmessage = document.getElementById("pop-up")
 
 document.getElementById("pop").addEventListener("click", function () {
 
     if ((email.value.trim() != '') && (email.value.includes("@gmail.com"))) {
-        popupmessage.innerHTML = `your details are accessed successfully ${email.value}.`;
-
+        popupmessage.innerHTML = `Your details are accessed successfully ${email.value}.`;
 
         popupmessage.classList.add("success");
-
-
-        popupmessage.style.backgroundColor = 'blueviolet';
+        popupmessage.style.backgroundColor = 'lemonchiffon';
+        popupmessage.style.color = "black";
 
         setTimeout(() => {
             popupmessage.classList.remove('success');
         }, 3000);
 
         document.getElementById("chat").classList.remove("open");
+        document.body.style.overflow = "auto";
 
         email.value = '';
 
-
     }
     else {
-        popupmessage.innerHTML = "enter valid email";
+        popupmessage.innerHTML = `Enter valid email.`;
         popupmessage.classList.add("success");
 
         popupmessage.style.backgroundColor = 'brown';
-        popupmessage.style.textAlign = 'center';
+        popupmessage.style.color = "white";
 
         setTimeout(() => {
             popupmessage.classList.remove("success");
