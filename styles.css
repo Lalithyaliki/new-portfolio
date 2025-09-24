@@ -20,7 +20,7 @@ html {
   width: 100%;
   color: white;
   background-color: green;
-  z-index: 999;
+  z-index: 10;
 }
 .navbar .logo {
   display: flex;
@@ -281,6 +281,9 @@ html {
   background-color: white;
   color: aquamarine;
 }
+.about .about1 .icon button:active {
+  transform: scale(0.98);
+}
 .about .about2 {
   display: none;
   opacity: 0;
@@ -316,8 +319,8 @@ html {
   display: flex;
   justify-content: end;
   align-items: end;
-  z-index: 9999;
-  transition: all 0.7s ease-in;
+  z-index: 11;
+  transition: all 0.5s ease-in;
 }
 .chat.open {
   -webkit-backdrop-filter: blur(15px);
@@ -354,8 +357,8 @@ html {
   color: aqua;
 }
 .chat .outside .head button {
-  line-height: 0;
   padding: 0px 10px;
+  line-height: 30px;
   font-size: 18px;
   border: 1px solid white;
   border-radius: 5px;
@@ -408,6 +411,9 @@ html {
   background-color: black;
   border: none;
 }
+.chat .outside .send button:active {
+  transform: scale(0.98);
+}
 
 .pop-up {
   position: fixed;
@@ -418,7 +424,7 @@ html {
   margin: 0 auto;
   opacity: 0;
   transition: all 0.4s ease-in;
-  z-index: 1000;
+  z-index: 12;
   padding: 10px 30px;
   text-align: center;
   letter-spacing: 1px;
